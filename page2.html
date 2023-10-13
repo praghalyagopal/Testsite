@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Parameter Example</title>
+</head>
+<body>
+    <h1>Query Parameter Example</h1>
+    <p>Parameter 1: <span id="param1"></span></p>
+    <p>Parameter 2: <span id="param2"></span></p>
+
+    <script>
+        // Function to get the query parameters from the URL
+        function getQueryParams() {
+            const queryParams = new URLSearchParams(window.location.search);
+            const param1 = queryParams.get('param1');
+            const param2 = queryParams.get('param2');
+
+            // Display the values on the page
+            document.getElementById('param1').textContent = param1 || 'Not provided';
+            document.getElementById('param2').textContent = param2 || 'Not provided';
+        }
+
+        // Call the function to process the query parameters
+        getQueryParams();
+    </script>
+</body>
+</html>
